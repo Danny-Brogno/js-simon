@@ -1,7 +1,7 @@
-// TODO NOW
-// - alert con "fine giro" dopo 10 secondi (setTimeout)
-// - stampare in pagina cronometro che arriva a 10 secondi (setInterval)
-
+// // TODO NOW
+// // - alert con "fine giro" dopo 10 secondi (setTimeout)
+// // - stampare in pagina cronometro che arriva a 10 secondi (setInterval)
+//
 // function delay() {
 //   alert("fine giro");
 // }
@@ -11,30 +11,8 @@
 // }
 //
 // init();
-
-// set timeout richiama la funzioen uan volta sola mentre set interval la richiama tante volte
-
-// var time;
-// var clock;
 //
-// function tick() {
-//
-//   document.getElementById('lol').innerHTML = time++; // THIS STOPS THE CLOCK
-//
-//   if (time > 10) { // If the time goes OVER the 10 seconds
-//     clearInterval(clock); // THIS STOPS THE CLOCK
-//     document.getElementById('lol').innerHTML = "the end";
-//
-//   }
-//   console.log(clock);
-// }
-//
-// function init() {
-//   time = 1;
-//   clock = setInterval(tick, 1000);
-// }
-//
-// init();
+// // set timeout richiama la funzioen uan volta sola mentre set interval la richiama tante volte
 
 
 
@@ -130,8 +108,6 @@ function getRandomValue(min, max) {
   return Math.floor(Math.random() * localMax) + localMin;
 }
 
-console.log(getRandomValue(1, 10));
-
 // GENERATING ARRAY WITH FIVE ELEMENTS
 var arrNum = [];
 
@@ -143,7 +119,7 @@ while (arrNum.length < 5) {
   }
 }
 
-alert('Memorizza questi cinque numeri: ' + ' ' + arrNum);
+alert('Memorize these numbers: ' + ' ' + arrNum);
 
 // richiesta imput utente
 
@@ -155,6 +131,7 @@ setTimeout(function(){
 
   while (userArr.length < 5) {
     var userNumber = parseInt(prompt('Write the number'));
+
     if (!userArr.includes(userNumber)){
       userArr.push(userNumber);
 
@@ -165,28 +142,35 @@ setTimeout(function(){
   }
 
   console.log(userArr, numberOk);
-}, 3000);
+}, 4300);
+
 
 console.log(arrNum);
 
 
+// Here I create a function with the countdown shown AFTER the alert with the numbers goes away (and before the prompt to write the numbers )
 
+var time;
+var clock;
 
+function tickOfClock() {
 
+  document.getElementById('lol').innerHTML = time--; // Here I say that the time has to go BACKWARDS
 
+  if (time < 0) {// If the countdown goes to zero (I timed it perfectly with the function delay at line 145)...
+    clearInterval(clock); // ...the ime is officially STOPPED...
+    document.getElementById('lol').innerHTML = "START"; // ...and this appears on the page...
 
+  }
+  console.log(clock);
+}
 
+function init() {
+  time = 3; // Here I set the timer start from 3 (three, two, one).
+  clock = setInterval(tickOfClock, 1000); // here I set the start of the timer and the end at the same time (summoning the function tickOfClock where there is the "if")
+}
 
-
-
-
-
-
-
-
-
-
-
+init();
 
 
 
