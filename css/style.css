@@ -1,0 +1,25 @@
+/* GENERAL RULES FOR THE PAGE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: navy;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#lol {
+  text-align: center;
+}
