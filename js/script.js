@@ -113,7 +113,7 @@ function getRandomValue(min, max) {
 var arrNum = [];
 
 while (arrNum.length < 5) {
-  var rnd = getRandomValue(1, 10);
+  var rnd = getRandomValue(1, 100);
 
   if (!arrNum.includes(rnd)){
     arrNum.push(rnd);
@@ -142,7 +142,7 @@ setTimeout(function(){
       }
     }
   }
-  console.log(userArr, numberOk);
+  console.log("Hai inserito questi numeri: ", userArr, "Hai azzeccato questi numeri: ", numberOk);
 }, 4300);
 
 
@@ -172,6 +172,7 @@ function init() {
 }
 
 init();
+
 
 
 
