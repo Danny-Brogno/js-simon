@@ -109,6 +109,7 @@ function getRandomValue(min, max) {
 }
 
 // GENERATING ARRAY WITH FIVE ELEMENTS
+
 var arrNum = [];
 
 while (arrNum.length < 5) {
@@ -121,7 +122,8 @@ while (arrNum.length < 5) {
 
 alert('Memorize these numbers: ' + ' ' + arrNum);
 
-// richiesta imput utente
+
+// Request user to put numbers one at a time
 
 
 setTimeout(function(){
@@ -130,7 +132,7 @@ setTimeout(function(){
   var numberOk = [];
 
   while (userArr.length < 5) {
-    var userNumber = parseInt(prompt('Write the number'));
+    var userNumber = parseInt(prompt('Write the numbers (one at a time)'));
 
     if (!userArr.includes(userNumber)){
       userArr.push(userNumber);
@@ -140,7 +142,6 @@ setTimeout(function(){
       }
     }
   }
-
   console.log(userArr, numberOk);
 }, 4300);
 
